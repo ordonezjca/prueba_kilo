@@ -5,29 +5,29 @@ const Home = () => {
   return (
     <div className="home">
       <div className="hero-section">
-        <h1>🍳 Cooking Tournament Manager</h1>
+        <h1>🍳 Administrador de torneos de cocina</h1>
         <p className="hero-description">
-          Discover culinary excellence! Manage talented chefs, organize exciting tournaments,
-          and track rankings in the most delicious cooking competitions.
+          ¡Descubre la excelencia culinaria! Gestiona chefs talentosos, organiza torneos emocionantes,
+          y sigue la clasificación en las competiciones culinarias más deliciosas.
         </p>
       </div>
       <div className="features">
         <div className="feature-card">
-          <h3>👨‍🍳 Chef Management</h3>
-          <p>Register and manage professional chefs with their specialties and experience.</p>
+          <h3>👨‍🍳 Administracion de chefs</h3>
+          <p>Registre y gestione a chefs profesionales con sus especialidades y experiencia.</p>
         </div>
         <div className="feature-card">
-          <h3>🏆 Tournament Creation</h3>
-          <p>Create and organize cooking tournaments with custom rules and categories.</p>
+          <h3>🏆 Creacion de torneos</h3>
+          <p>Crea y organiza torneos de cocina con reglas y categorías personalizadas.</p>
         </div>
         <div className="feature-card">
-          <h3>📊 Rankings & Results</h3>
-          <p>Track competition results and maintain leaderboards for all tournaments.</p>
+          <h3>📊 Podio y resultados</h3>
+          <p>Realizar un seguimiento de los resultados de las competiciones y manten actualizadas las clasificaciones de todos los torneos.</p>
         </div>
       </div>
       <div className="links">
-        <Link to="/tournaments" className="cta-button">View Tournaments</Link>
-        <Link to="/chefs" className="cta-button">Manage Chefs</Link>
+        <Link to="/tournaments" className="cta-button">Ver torneos</Link>
+        <Link to="/chefs" className="cta-button">Gestionar chefs</Link>
       </div>
     </div>
   );

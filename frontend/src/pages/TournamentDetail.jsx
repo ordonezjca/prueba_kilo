@@ -64,29 +64,29 @@ const TournamentDetail = () => {
   return (
     <div className="tournament-detail">
       <h2>{tournament.name}</h2>
-      <p>Location: {tournament.location}</p>
-      <p>Registered: {tournament.registeredChefs.length}/{tournament.maxChefs}</p>
+      <p>Lugar: {tournament.location}</p>
+      <p>Registrados: {tournament.registeredChefs.length}/{tournament.maxChefs}</p>
 
       <h3>Registered Chefs</h3>
       <ul>
         {tournament.registeredChefs.map(chefId => {
           const chef = chefs.find(c => c.id === chefId);
-          return <li key={chefId}>{chef?.name} - Score: {tournament.results[chefId] || 'Not submitted'}</li>;
+          return <li key={chefId}>{chef?.name} - Puntaje: {tournament.results[chefId] || 'Not submitted'}</li>;
         })}
       </ul>
 
-      <h3>Register Chef</h3>
+      <h3>Registrar chef</h3>
       <select value={selectedChef} onChange={(e) => setSelectedChef(e.target.value)}>
-        <option value="">Select Chef</option>
+        <option value="">Elegir chef</option>
         {availableChefs.map(chef => (
           <option key={chef.id} value={chef.id}>{chef.name}</option>
         ))}
       </select>
       <button onClick={handleRegister} disabled={!selectedChef}>Register</button>
 
-      <h3>Submit Score</h3>
+      <h3>Subir puntaje</h3>
       <select value={submitChef} onChange={(e) => setSubmitChef(e.target.value)}>
-        <option value="">Select Chef</option>
+        <option value="">Seleccionar chef</option>
         {tournament.registeredChefs.map(chefId => {
           const chef = chefs.find(c => c.id === chefId);
           return <option key={chefId} value={chefId}>{chef.name}</option>;
@@ -94,15 +94,15 @@ const TournamentDetail = () => {
       </select>
       <input
         type="number"
-        placeholder="Score (0-100)"
+        placeholder="Puntaje (0-100)"
         value={score}
         onChange={(e) => setScore(e.target.value)}
         min="0"
         max="100"
       />
-      <button onClick={handleSubmitScore} disabled={!submitChef || !score}>Submit Score</button>
+      <button onClick={handleSubmitScore} disabled={!submitChef || !score}>Subir puntaje</button>
 
-      <h3>Ranking</h3>
+      <h3>Podio</h3>
       <ol>
         {ranking.map((item, index) => (
           <li key={item.chef.id}>{item.chef.name} - {item.score}</li>

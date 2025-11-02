@@ -28,11 +28,13 @@ header {
 header h1 {
   margin: 0 0 10px 0;
   color: white;
+  text-align: center;
 }
 
 nav {
   display: flex;
   gap: 20px;
+  justify-content: center;
 }
 
 nav a {

@@ -11,10 +11,10 @@ function App() {
     <Router>
       <div className="App">
         <header>
-          <h1>Cooking Tournament Manager</h1>
+          <h1>Administrador de torneos de cocina</h1>
           <nav>
             <a href="/">Home</a>
-            <a href="/tournaments">Tournaments</a>
+            <a href="/tournaments">Torneos</a>
             <a href="/chefs">Chefs</a>
           </nav>
         </header>

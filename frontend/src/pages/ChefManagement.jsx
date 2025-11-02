@@ -42,37 +42,37 @@ const ChefManagement = () => {
 
   return (
     <div className="chef-management">
-      <h2>Chef Management</h2>
+      <h2>Gestion de chefs</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Name"
+          placeholder="Nombre"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           required
         />
         <input
           type="text"
-          placeholder="Specialty"
+          placeholder="Especialidad"
           value={formData.specialty}
           onChange={(e) => setFormData({ ...formData, specialty: e.target.value })}
           required
         />
         <input
           type="number"
-          placeholder="Experience Years"
+          placeholder="Años de experiencia "
           value={formData.experienceYears}
           onChange={(e) => setFormData({ ...formData, experienceYears: e.target.value })}
           required
           min="0"
         />
-        <button type="submit">Create Chef</button>
+        <button type="submit">Crear registro</button>
       </form>
-      <h3>Existing Chefs</h3>
+      <h3>Chefs existentes</h3>
       <ul>
         {chefs.map(chef => (
           <li key={chef.id}>
-            {chef.name} - {chef.specialty} ({chef.experienceYears} years)
+            {chef.name} - {chef.specialty} ({chef.experienceYears} Años)
           </li>
         ))}
       </ul>

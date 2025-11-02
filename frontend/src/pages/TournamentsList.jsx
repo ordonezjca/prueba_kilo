@@ -45,35 +45,35 @@ const TournamentsList = () => {
 
   return (
     <div className="tournaments-list">
-      <h2>Tournaments</h2>
+      <h2>Torneos</h2>
       <button onClick={() => setShowForm(!showForm)}>
-        {showForm ? 'Cancel' : 'Create Tournament'}
+        {showForm ? 'Cancelar' : 'Create Tournament'}
       </button>
       {showForm && (
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            placeholder="Name"
+            placeholder="Nombre"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
           />
           <input
             type="text"
-            placeholder="Location"
+            placeholder="Lugar"
             value={formData.location}
             onChange={(e) => setFormData({ ...formData, location: e.target.value })}
             required
           />
           <input
             type="number"
-            placeholder="Max Chefs"
+            placeholder="limite de Chefs"
             value={formData.maxChefs}
             onChange={(e) => setFormData({ ...formData, maxChefs: e.target.value })}
             required
             min="1"
           />
-          <button type="submit">Create</button>
+          <button type="submit">crear</button>
         </form>
       )}
       <ul>
